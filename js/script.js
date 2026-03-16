@@ -1,7 +1,7 @@
 main = document.getElementById('main');
 error = document.getElementById('error');
 
-JCX-Code = document.getElementById('JCX-Code');
+JCXCode = document.getElementById('JCX-Code');
 
 request = new XMLHttpRequest();
 request.onreadystatechange = function() {
@@ -9,7 +9,7 @@ request.onreadystatechange = function() {
 		if (this.status == 200) {
 			response = JSON.parse(this.responseText);
 
-			JCX-Code.innerHTML = response['JCX-Code'];
+			JCXCode.innerHTML = response['JCX-Code'];
 
 			error.classList.value = 'd-none';
 			main.classList.value = 'text-center';
