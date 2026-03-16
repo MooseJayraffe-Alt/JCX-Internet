@@ -1,12 +1,7 @@
 main = document.getElementById('main');
 error = document.getElementById('error');
 
-ip = document.getElementById('ip');
-hostname = document.getElementById('hostname');
-isp = document.getElementById('isp');
-city = document.getElementById('city');
-region = document.getElementById('region');
-country = document.getElementById('country');
+JCX-Code = document.getElementById('JCX-Code');
 
 request = new XMLHttpRequest();
 request.onreadystatechange = function() {
@@ -14,12 +9,7 @@ request.onreadystatechange = function() {
 		if (this.status == 200) {
 			response = JSON.parse(this.responseText);
 
-			ip.innerHTML = response['ip'];
-			hostname.innerHTML = response['hostname'];
-			isp.innerHTML = response['org'];
-			city.innerHTML = response['city'];
-			region.innerHTML = response['region'];
-			country.innerHTML = response['country'];
+			JCX-Code.innerHTML = response['JCX-Code'];
 
 			error.classList.value = 'd-none';
 			main.classList.value = 'text-center';
