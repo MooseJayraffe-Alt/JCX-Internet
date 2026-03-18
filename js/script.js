@@ -9,7 +9,7 @@ request.onreadystatechange = function() {
 		if (this.status == 200) {
 			response = JSON.parse(this.responseText);
 
-			JCXCode.innerHTML = response['JCX-Code'];
+			JCXCode.innerHTML = response['ip'];
 
 			error.classList.value = 'd-none';
 			main.classList.value = 'text-center';
